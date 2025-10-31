@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h3>SmartMeet Attendance</h3>
-    <button id="capture">Capture Attendance</button>
+    <div class="header">
+      <h3>📋 SmartMeet Attendance</h3>
+    </div>
+    
+    <div class="stats-container">
+      <div class="stat-item">
+        <span class="stat-label">Total Sessions</span>
+        <span class="stat-value" id="totalSessions">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Last Session</span>
+        <span class="stat-value" id="lastSession">N/A</span>
+      </div>
+    </div>
+
+    <button id="capture" class="primary-btn">
+      <span>📸</span>
+      Capture Attendance
+    </button>
+    
+    <div class="history-section">
+      <div class="section-header">
+        <span>📊 Recent Sessions</span>
+        <button id="clearHistory" class="clear-btn" title="Clear History">🗑️</button>
+      </div>
+      <div id="historyList" class="history-list">
+        <p class="empty-state">No attendance records yet</p>
+      </div>
+    </div>
+
     <p id="status"></p>
+
+    <div class="footer">
+      <span class="footer-text">Click button to capture from Google Meet</span>
+    </div>
 
     <script src="popup.js"></script>
   </body>
