@@ -66,4 +66,4 @@ smartmeet-attendance/
 
 ## License
 
-Mr.DCT License
+MIT License
